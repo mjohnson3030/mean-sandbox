@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+	<head>
+			<title>Name your app</title>
+			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+			<style>
+				html 					{ overflow-y:scroll; }
+				body 					{ padding-top:50px; }
+				#todo-list 				{ margin-bottom:30px; }
+			</style>
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<ng-view></ng-view>
+
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/controllers/main.js"></script>
+	</body>
+</html>
+
