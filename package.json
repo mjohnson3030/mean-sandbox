@@ -13,7 +13,7 @@
   "author": "Peter Short",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~4.0.0",
+    "express": "~4.17.1",
     "mongoose": "~3.8.8",
     "connect": "~2.14.4"
   }
