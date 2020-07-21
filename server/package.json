@@ -10,11 +10,12 @@
   "keywords": [
     "test"
   ],
-  "author": "Peter Short",
+  "author": "Matt Johnson",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "connect": "~2.14.4",
     "express": "~4.0.0",
-    "mongoose": "~3.8.8",
-    "connect": "~2.14.4"
+    "mongodb": "^3.5.9",
+    "mongoose": "~3.8.8"
   }
 }
