@@ -1,13 +1,10 @@
-var index = require('./index');
 var database = require('../config/database');
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
 module.exports = function(app) {
-	app.get('/', index.index);
-
 	// routes to manage 'person' index
-	app.get('/person/:id', (req, res) => {
+	app.get('/api/person/:id', (req, res) => {
 		getSandboxClient()
 			.then(db => {
 				db.collection('people')
@@ -24,7 +21,7 @@ module.exports = function(app) {
 			})
 	});
 
-	app.delete('/person/:id', (req, res) => {
+	app.delete('/api/person/:id', (req, res) => {
 		getSandboxClient()
 			.then(db => {
 				db.collection('people')
@@ -38,7 +35,7 @@ module.exports = function(app) {
 			})
 	});
 
-	app.get('/person', (req, res) => {
+	app.get('/api/person', (req, res) => {
 		getSandboxClient()
 			.then(db => {
 				db.collection('people').find().toArray(function(err, result) {
@@ -48,7 +45,7 @@ module.exports = function(app) {
 			})
 	});
 
-	app.put('/person', (req, res) => {
+	app.put('/api/person', (req, res) => {
 		if (!req.body.first || !req.body.last) {
 			throw Error('Invalid request');
 		}
@@ -61,7 +58,7 @@ module.exports = function(app) {
 			})
 	});
 
-	app.post('/person/:id', (req, res) => {
+	app.post('/api/person/:id', (req, res) => {
 		var newData = {
 			$set: {}
 		};
