@@ -13,8 +13,8 @@
   "author": "Matt Johnson",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "connect": "~2.14.4",
-    "express": "~4.0.0",
+    "connect": "~3.7.0",
+    "express": "~4.18.2",
     "mongodb": "^3.5.9",
     "mongoose": "~5.7.5"
   }
